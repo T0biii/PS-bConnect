@@ -17,4 +17,4 @@ jobs:
 
       - name: PowerShell script
         run: cd doc && .\make_Commands.md.ps1
-          shell: powershell
+        shell: powershell
