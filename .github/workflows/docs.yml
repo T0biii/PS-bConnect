@@ -3,22 +3,23 @@ on:
   push:
   pull_request:
     
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  # This workflow contains a single job called "build"
   build:
+    # The type of runner that the job will run on
     runs-on: windows-latest
 
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - uses: actions/checkout@v2
-      with: 
-        fetch-depth: 20
-   
-    - name: Patch Extension Manifest Version
-      uses: Amadevus/pwsh-script@v2
-      id: versioner
-      with:
-        script: |
-          .\doc\make_Commands.md.ps1
-          git add .
-          git commit "Update Docs"
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
 
+      - name: PowerShell script
+        # You may pin to the exact commit or the version.
+        # uses: Amadevus/pwsh-script@25a636480c7bc678a60bbf4e3e5ac03aca6cf2cd
+        uses: Amadevus/pwsh-script@v2.0.0
+        with:
+          # PowerShell script to execute in Actions-hydrated context
+          script: .\doc\make_Commands.md.ps1
     
