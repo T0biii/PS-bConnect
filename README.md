@@ -1,4 +1,3 @@
-
 ![GitHub](https://img.shields.io/github/license/baramundisoftware/PS-bConnect.svg)
 [![PowerShell Gallery Version](https://img.shields.io/powershellgallery/v/bConnect.svg)](https://www.powershellgallery.com/packages/bConnect/) 
 [![PowerShell Gallery](https://img.shields.io/powershellgallery/dt/bConnect.svg)](https://www.powershellgallery.com/packages/bConnect/)
