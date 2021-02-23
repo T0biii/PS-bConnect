@@ -2,22 +2,23 @@ name: Build Docs
 on:
   push:
   pull_request:
-
-defaults:
-  run:
-    shell: pwsh
+    
 jobs:
   build:
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
-    runs-on: ${{ matrix.os }}
+    runs-on: windows-latest
+
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-    - uses: Amadevus/pwsh-script@v2
-    id: my-script
-    with:
-      script: '1 + 1'
-  - run: echo "${{ steps.my-script.outputs.result }}"
-    # should print 2
+      with: 
+        fetch-depth: 20
+   
+    - name: Patch Extension Manifest Version
+      uses: Amadevus/pwsh-script@v2
+      id: versioner
+      with:
+        script: |
+          .\doc\make_Commands.md.ps1
+          git add .
+          git commit "Update Docs"
+
+    
