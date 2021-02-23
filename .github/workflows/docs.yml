@@ -22,4 +22,4 @@ jobs:
         with:
           # PowerShell script to execute in Actions-hydrated context
           script: .\doc\make_Commands.md.ps1
-    
+        continue-on-error: true
