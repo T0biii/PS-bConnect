@@ -16,10 +16,5 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: PowerShell script
-        # You may pin to the exact commit or the version.
-        # uses: Amadevus/pwsh-script@25a636480c7bc678a60bbf4e3e5ac03aca6cf2cd
-        uses: Amadevus/pwsh-script@v2.0.0
-        with:
-          # PowerShell script to execute in Actions-hydrated context
-          script: cd doc && .\make_Commands.md.ps1
-        continue-on-error: true
+        run: cd doc && .\make_Commands.md.ps1
+          shell: powershell
