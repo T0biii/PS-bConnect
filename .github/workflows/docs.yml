@@ -16,5 +16,5 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: PowerShell script
-        run:  .\doc\make_Commands.md.ps1
+        run:  .\make_Commands.md.ps1
         shell: powershell

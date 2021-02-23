@@ -1,4 +1,4 @@
-Import-Module ../bConnect/bConnect.psd1 -Force
+Import-Module bConnect/bConnect.psd1 -Force
 
 
 function syntax ($cmd,$header=4) {
