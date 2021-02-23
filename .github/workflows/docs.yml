@@ -21,7 +21,5 @@ jobs:
         uses: Amadevus/pwsh-script@v2.0.0
         with:
           # PowerShell script to execute in Actions-hydrated context
-          script: | 
-          cd doc
-          .\make_Commands.md.ps1
+          script: cd doc && .\make_Commands.md.ps1
         continue-on-error: true
