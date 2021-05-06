@@ -1,3 +1,4 @@
+Write-host $pwd
 Import-Module bConnect/bConnect.psd1 -Force
 
 
