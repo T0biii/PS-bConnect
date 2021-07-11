@@ -11,7 +11,6 @@ body:
         required: true
       - label: I have verified that my issue has not been already answered in the past. I also checked previous [issues](https://github.com/baramundisoftware/PS-bConnect/issues).
         required: true
-
 - type: textarea
   attributes:
     label: "Describe the bug"
@@ -19,7 +18,6 @@ body:
     placeholder: ""
   validations:
     required: true
-    
 - type: textarea
   attributes:
     label: "How to Reproduce"
@@ -31,16 +29,3 @@ body:
       3. See error
   validations:
     required: true
-
-- type: textarea
-  attributes:
-    label: "System information"
-    description: ""
-    placeholder: "| Question | Answer |
-| --- | --- |
-| My operating system | Win10 |
-| baramundi Server Version | 2020R1 |
-| PS-bConnect Version | 19.2.0.5 |"
-  validations:
-    required: true
-  
