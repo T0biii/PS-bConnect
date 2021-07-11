@@ -1,34 +1,46 @@
----
-name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
+name: Bug Report
+description: Create a report to help us improve
+labels:
+body:    
+- type: checkboxes
+  attributes:
+    label: Confirmation
+    description: Please make sure to have followed the following checks.
+    options:
+      - label: I have understood that answers are voluntary and community-driven, and not commercial support.
+        required: true
+      - label: I have verified that my issue has not been already answered in the past. I also checked previous [issues](https://github.com/baramundisoftware/PS-bConnect/issues).
+        required: true
 
----
+- type: textarea
+  attributes:
+    label: "Describe the bug"
+    description: "A clear and concise description of what the bug is."
+    placeholder: ""
+  validations:
+    required: true
+    
+- type: textarea
+  attributes:
+    label: "How to Reproduce"
+    description: |-
+      List the steps on how to reproduce this Bug.
+    placeholder: |-
+      1. Go to '...'
+      2. Run Command '....'
+      3. See error
+  validations:
+    required: true
 
-**Prior to placing the issue, please check following:** *(fill out each checkbox with an `X` once done)*
-- [ ] I have understood that answers are voluntary and community-driven, and not commercial support.
-- [ ] I have verified that my issue has not been already answered in the past. I also checked previous [issues](https://github.com/baramundisoftware/PS-bConnect/issues).
-
-**Describe the bug**
-A clear and concise description of what the bug is.
-
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Run Command '....'
-4. See error
-
-**Expected behavior**
-A clear and concise description of what you expected to happen.
-
-**System information**
-| Question | Answer |
+- type: textarea
+  attributes:
+    label: "System information"
+    description: ""
+    placeholder: "| Question | Answer |
 | --- | --- |
 | My operating system | Win10 |
 | baramundi Server Version | 2020R1 |
-| PS-bConnect Version | 19.2.0.5 |
-
-**Additional context**
-Add any other context about the problem here.
+| PS-bConnect Version | 19.2.0.5 |"
+  validations:
+    required: true
+  
